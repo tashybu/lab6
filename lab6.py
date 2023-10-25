@@ -9,6 +9,7 @@ def encode(password):
 
 
 def menu():
+    # Prints a menu
     print("Menu\n"
           "-------------\n"
           "1. Encode\n"
@@ -21,6 +22,7 @@ def main():
     password = ""
     encoded_pass = ""
 
+    # While loop for menu
     while user_choice != 3:
         menu()
         user_choice = int(input("\nPlease enter an option: "))
