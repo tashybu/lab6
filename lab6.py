@@ -4,7 +4,10 @@ def encode(password):
     # Encodes input by increasing each digit by 3
     result = ""
     for i in range(0, len(password)):
-        result += str(int(password[i]) + 3)
+        if int(password[i] + 3 > 9):
+            result += str(int(password[i] + 3 % 10))
+        else:
+            result += str(int(password[i]) + 3)
     return result
 
 def decode(password):
